@@ -24,6 +24,14 @@ namespace WebApplication3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+
+            // Session - middleware  -> 서비스에 등록함
+            services.AddSession();
+
+            // Identity
+
+            // Wep API 관련 기능 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +49,7 @@ namespace WebApplication3
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession(); // Application에서 사용하겠다.
             app.UseRouting();
 
             app.UseAuthorization();

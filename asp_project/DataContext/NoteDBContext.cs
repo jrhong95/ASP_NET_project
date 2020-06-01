@@ -15,8 +15,7 @@ namespace WebApplication3.DataContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=myPassword;");
-            // mssql -> ssms 설치 후 sa 계정 비밀번호 설정 한 후 myPassword 변경할 것
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=donghwa10413;");
             base.OnConfiguring(optionsBuilder);
         }
 

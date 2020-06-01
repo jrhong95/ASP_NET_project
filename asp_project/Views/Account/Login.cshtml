@@ -6,9 +6,10 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-@model WebApplication3.Models.User
+@model WebApplication3.ViewModel.LoginViewModel
 
-<form class="form-horizontal" method="post" asp-controller="Account" asp-action="Register">
+<form class="form-horizontal" method="post" asp-controller="Account" asp-action="Login">
+    
     <div class="form-group">
         <label> ID : </label>
         <input type="text" class="form-control" asp-for="UserID" placeholder="ID 입력" />
@@ -22,6 +23,7 @@
 
     <div class="form-group">
         <button type="submit" class="btn btn-primary"> 로그인 </button>
+        <div class="text-danger" asp-validation-summary="ModelOnly"></div>
         <a class="btn btn-warning" href="#">취소</a>
     </div>
 </form>
