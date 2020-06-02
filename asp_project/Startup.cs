@@ -1,14 +1,10 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ReflectionIT.Mvc.Paging;
+
 
 namespace WebApplication3
 {
@@ -27,13 +23,13 @@ namespace WebApplication3
         {
             services.AddControllersWithViews();
 
-            services.AddPaging();
-            // Session - middleware  -> ¼­ºñ½º¿¡ µî·ÏÇÔ
+            
+            // Session - middleware  -> ì„œë¹„ìŠ¤ì— ë“±ë¡í•¨
             services.AddSession();
 
             // Identity
 
-            // Wep API °ü·Ã ±â´É 
+            // Wep API ê´€ë ¨ ê¸°ëŠ¥ 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -51,7 +47,7 @@ namespace WebApplication3
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSession(); // Application¿¡¼­ »ç¿ëÇÏ°Ú´Ù.   
+            app.UseSession(); // Applicationì—ì„œ ì‚¬ìš©í•˜ê² ë‹¤.   
             app.UseRouting();
 
             app.UseAuthorization();
