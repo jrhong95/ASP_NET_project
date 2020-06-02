@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using PagedList;
+using ReflectionIT.Mvc.Paging;
 using WebApplication3.DataContext;
 using WebApplication3.Models;
 
@@ -14,7 +17,7 @@ namespace WebApplication3.Controllers
 {
     public class NoteController : Controller
     {
-        
+
 
         /// <summary>
         ///  게시판 리스트
@@ -23,16 +26,19 @@ namespace WebApplication3.Controllers
 
 
         // GET: /<controller>/
-        public IActionResult Index()
+        [Obsolete]
+        public async Task<IActionResult> Index(int page = 1)
         {
             if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
             {
                 return RedirectToAction("Login", "Account");
             }
-            
-            using (var db = new NoteDBContext()) 
+
+            using (var db = new NoteDBContext())
             {
-                var list = db.Notes.ToList();
+                var item = db.Notes.AsNoTracking().OrderByDescending(p=>p.NoteNo);
+                var list = await PagingList<Note>.CreateAsync(item, 10, page);
+
                 return View(list);
             }
 
@@ -49,10 +55,10 @@ namespace WebApplication3.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-            using(var db = new NoteDBContext())
+            using (var db = new NoteDBContext())
             {
                 var note = db.Notes.FirstOrDefault(n => n.NoteNo.Equals(noteNo));
-                
+
                 return View(note);
             }
             return View();
@@ -80,19 +86,20 @@ namespace WebApplication3.Controllers
             {
                 return RedirectToAction("Login", "Account");
             }
-            model.UserNo = int.Parse(HttpContext.Session.GetInt32("USER_LOGIN_KEY").ToString());
+            model.UserNo = Int32.Parse(HttpContext.Session.GetInt32("USER_LOGIN_KEY").ToString());
 
             if (ModelState.IsValid)
             {
                 using (var db = new NoteDBContext())
                 {
                     db.Notes.Add(model);
-                    if(db.SaveChanges() > 0)
+                    if (db.SaveChanges() > 0)
                     {
+                        db.SaveChanges();
                         return Redirect("Index");
                     }
                 }
-                ModelState.AddModelError(string.Empty,"게시물을 저장할 수 없습니다.");
+                ModelState.AddModelError(string.Empty, "게시물을 저장할 수 없습니다.");
             }
 
             return View(model);
@@ -103,28 +110,83 @@ namespace WebApplication3.Controllers
         ///  게시물 수정
         /// </summary>
         /// <returns></returns>
-        public IActionResult Edit()
+        public IActionResult Edit(int noteNo)
         {
             if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
             {
                 return RedirectToAction("Login", "Account");
             }
+            using (var db = new NoteDBContext())
+            {
+                var note = db.Notes.Where(n => n.NoteNo.Equals(noteNo)).FirstOrDefault();
+                return View(note);
+            }
 
-            return View();
+            return View(noteNo);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Note model)
+        {
+            if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+            model.UserNo = Int32.Parse(HttpContext.Session.GetInt32("USER_LOGIN_KEY").ToString());
+            using (var db = new NoteDBContext())
+            {
+                
+                db.Entry(model).CurrentValues.SetValues(model);
+                db.Update(model);
+                db.SaveChanges();
+                return Redirect("Index");
+            }
+            ModelState.AddModelError(string.Empty, "게시물을 저장할 수 없습니다.");
+
+
+            return View(model);
         }
         /// <summary>
         /// 게시물 삭제
         /// </summary>
-        /// <returns></returns>
-        public IActionResult Delete()
+        /// <returns></returns
+        /// 
+
+
+        public IActionResult Delete(Note model)
+        {
+            using (var db = new NoteDBContext())
+            {
+                var note = db.Notes.Where(n => n.NoteNo.Equals(model.NoteNo)).FirstOrDefault();
+                return View(note);
+            }
+        }
+
+        [HttpPost]
+
+        public IActionResult Delete(int noteNo)
         {
             if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
             {
                 return RedirectToAction("Login", "Account");
             }
 
+            using (var db = new NoteDBContext())
+            {
+                var note = db.Notes.FirstOrDefault(n => n.NoteNo.Equals(noteNo));
+
+                db.Notes.Remove(note);
+                
+                db.SaveChanges();
+
+                return Redirect("Index");
+
+            }
+            ModelState.AddModelError(string.Empty, "게시물을 삭제할 수 없습니다.");
+
+
             return View();
         }
-        
+
     }
 }

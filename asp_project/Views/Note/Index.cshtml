@@ -4,8 +4,14 @@
 @{
 }
 
+@model ReflectionIT.Mvc.Paging.PagingList<WebApplication3.Models.Note>
+@using ReflectionIT.Mvc.Paging
+@addTagHelper *, ReflectionIT.Mvc.Paging
 
 
+<nav>
+   페이지 이동 :  @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model })
+</nav>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -30,3 +36,7 @@
 </table>
 
 <a class="btn btn-warning" asp-controller="Note" asp-action="Add">게시물 작성</a>
+
+<nav>
+    페이지 이동 : <vc:pager paging-list="@Model" />
+</nav>

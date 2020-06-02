@@ -41,7 +41,7 @@ namespace WebApplication3.Controllers
                     if(user != null)
                     {
                         // HttpContext.Session.SetInt32(key, value);
-                        HttpContext.Session.SetInt32("USER_LOGIN_KEY",user.UserNo);
+                        HttpContext.Session.SetInt32("USER_LOGIN_KEY", user.UserNo);
 
 
 

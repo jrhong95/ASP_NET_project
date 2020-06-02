@@ -58,6 +58,14 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[5.0.0-preview.4.20220.10, )"
+            },
+            "PagedList.MVC": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            },
+            "ReflectionIT.Mvc.Paging": {
+              "target": "Package",
+              "version": "[4.0.0, )"
             }
           },
           "imports": [

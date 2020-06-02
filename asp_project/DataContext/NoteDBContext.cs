@@ -15,7 +15,7 @@ namespace WebApplication3.DataContext
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=donghwa10413;");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=sa1234;");
             base.OnConfiguring(optionsBuilder);
         }
 

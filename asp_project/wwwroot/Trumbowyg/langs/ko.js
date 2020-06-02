@@ -60,4 +60,5 @@ jQuery.trumbowyg.langs.ko = {
     text: '내용',
     target: '타겟',
     width: '너비'
+  
 };
