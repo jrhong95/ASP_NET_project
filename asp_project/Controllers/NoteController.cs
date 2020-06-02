@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+using System;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using PagedList;
-using ReflectionIT.Mvc.Paging;
 using WebApplication3.DataContext;
 using WebApplication3.Models;
 
@@ -26,8 +22,8 @@ namespace WebApplication3.Controllers
 
 
         // GET: /<controller>/
-        [Obsolete]
-        public async Task<IActionResult> Index(int page = 1)
+
+        public IActionResult Index(int page = 1)
         {
             if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
             {
@@ -36,10 +32,9 @@ namespace WebApplication3.Controllers
 
             using (var db = new NoteDBContext())
             {
-                var item = db.Notes.AsNoTracking().OrderByDescending(p=>p.NoteNo);
-                var list = await PagingList<Note>.CreateAsync(item, 10, page);
-
-                return View(list);
+                var list = db.Notes.ToList();
+                
+                return View(list.ToPagedList(page, 5));
             }
 
             return View();
