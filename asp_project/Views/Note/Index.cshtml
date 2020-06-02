@@ -1,17 +1,13 @@
-﻿@*
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
 }
 
-@model ReflectionIT.Mvc.Paging.PagingList<WebApplication3.Models.Note>
-@using ReflectionIT.Mvc.Paging
-@addTagHelper *, ReflectionIT.Mvc.Paging
+<label>Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount </label>
 
+<br /><br />
 
-<nav>
-   페이지 이동 :  @await this.Component.InvokeAsync("Pager", new { pagingList = this.Model })
-</nav>
 <table class="table table-bordered">
     <thead>
         <tr>
@@ -35,8 +31,13 @@
 
 </table>
 
-<a class="btn btn-warning" asp-controller="Note" asp-action="Add">게시물 작성</a>
 
-<nav>
-    페이지 이동 : <vc:pager paging-list="@Model" />
-</nav>
+<a class="btn btn-warning"  asp-controller="Note" asp-action="Add">게시물 작성</a>
+
+
+<div class="panel text-center">
+@for (var p = 1; p <= Model.PageCount; p++)
+{
+    <a href="@Url.Action("Index", new { page = p })" class="btn btn-outline-primary">@p</a>
+}
+</div>
