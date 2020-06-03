@@ -1,5 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿@model IEnumerable<WebApplication3.Models.Lost>
+
+    <table>
+        <thead>
+            <tr>
+                <th>분실날짜</th>
+                <th>물건</th>
+                <th>위치</th>
+                <th>설명</th>
+            </tr>
+        </thead>
+        @foreach (var lost in Model)
+        {
+            <tr>
+                <td>@lost.date</td>
+                <td>@lost.goods</td>
+                <td>@lost.location</td>
+                <td>@lost.description</td>
+            </tr>
+        }
+    </table>
