@@ -1,14 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using ReflectionIT.Mvc.Paging;
 
 namespace WebApplication3
 {
@@ -27,7 +22,6 @@ namespace WebApplication3
         {
             services.AddControllersWithViews();
 
-            services.AddPaging();
             // Session - middleware  -> 서비스에 등록함
             services.AddSession();
 
