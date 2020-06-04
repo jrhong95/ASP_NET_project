@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-﻿using System;
-=======
 using System;
->>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
 using System.Linq;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,11 +23,7 @@ namespace WebApplication3.Controllers
 
 
         // GET: /<controller>/
-<<<<<<< HEAD
         
-=======
-
->>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
         public IActionResult Index(int page = 1)
         {
             if (HttpContext.Session.GetInt32("USER_LOGIN_KEY") == null)
@@ -194,3 +186,4 @@ namespace WebApplication3.Controllers
 
     }
 }
+
