@@ -1,10 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+<<<<<<< HEAD
 using System.Xml;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PagedList;
+=======
+using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.XPath;
+using Microsoft.AspNetCore.Mvc;
+>>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
 using WebApplication3.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,10 +20,17 @@ namespace WebApplication3.Controllers
 {
     public class LostController : Controller
     {
+<<<<<<< HEAD
         public IActionResult Index(int page = 1)
         {
             string url = "http://apis.data.go.kr/1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccToClAreaPd?serviceKey=NWOxLHFs7YrxdPu2caTYxawT1IP1aY%2B2aL7UKm2IuwSuoUYaMLvPxScxP4CeFl%2Fs5vMLnVzKnjAVqqkqNVznMw%3D%3D" +
         "&START_YMD=20200501" +
+=======
+        public IActionResult Index()
+        {
+            string url = "http://apis.data.go.kr/1320000/LostGoodsInfoInqireService/getLostGoodsInfoAccToClAreaPd?serviceKey=NWOxLHFs7YrxdPu2caTYxawT1IP1aY%2B2aL7UKm2IuwSuoUYaMLvPxScxP4CeFl%2Fs5vMLnVzKnjAVqqkqNVznMw%3D%3D" +
+        "&START_YMD=20200501" + 
+>>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
         "&END_YMD=20200601" +
         "&LST_LCT_CD=LCA000" +
         "&pageNo=1" +
@@ -34,12 +48,18 @@ namespace WebApplication3.Controllers
                     goods = xnode["lstPrdtNm"].InnerText,
                     description = xnode["lstSbjt"].InnerText,
                     date = xnode["lstYmd"].InnerText,
+<<<<<<< HEAD
                     
                 });
             }
            
             list_sort(losts);
             return View(losts.ToPagedList(page, 5));
+=======
+                });
+            }
+            return View(losts);
+>>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
         }
         public static void list_sort(List<Lost> a)
         {
