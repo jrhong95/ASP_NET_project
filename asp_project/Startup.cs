@@ -4,10 +4,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-<<<<<<< HEAD
-=======
-
->>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
 
 namespace WebApplication3
 {
@@ -25,18 +21,11 @@ namespace WebApplication3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
-<<<<<<< HEAD
-            // Session - middleware  -> ���񽺿� �����
-=======
-            
-            // Session - middleware  -> 서비스에 등록함
->>>>>>> 4dd9c468588102cdf436616d25e78980b5cf5ae2
             services.AddSession();
 
             // Identity
 
-            // Wep API 관련 기능 
+            // Wep API ?????? ?????? 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +43,7 @@ namespace WebApplication3
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            app.UseSession(); // Application에서 사용하겠다.   
+            app.UseSession(); // Application?????? ???????????????.   
             app.UseRouting();
 
             app.UseAuthorization();

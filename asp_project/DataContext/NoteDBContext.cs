@@ -13,9 +13,11 @@ namespace WebApplication3.DataContext
 
         public DbSet<Note> Notes { get; set; }
 
+        public DbSet<Lost_seoul> Lost_seoul { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=sa1234;");
+            optionsBuilder.UseSqlServer(@"Server=localhost;Database=NoteDB;User Id=sa;Password=tpghk!214;");
             base.OnConfiguring(optionsBuilder);
         }
 
