@@ -13,7 +13,7 @@ namespace WebApplication3.DataContext
 
         public DbSet<Note> Notes { get; set; }
 
-        public DbSet<Lost_seoul> Lost_seoul { get; set; }
+        public DbSet<Found> Found { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
