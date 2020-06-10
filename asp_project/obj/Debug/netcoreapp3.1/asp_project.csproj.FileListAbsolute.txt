@@ -112,4 +112,5 @@ C:/Users/홍세화/source/repos/asp_net_project/asp_project/obj/Debug/netcoreapp
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/asp_project.pdb
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/asp_project.genruntimeconfig.cache
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetDB.cshtml.g.cs
-/Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetPoliceDBToday.cshtml.g.cs
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
+/Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetTodayDB.cshtml.g.cs
