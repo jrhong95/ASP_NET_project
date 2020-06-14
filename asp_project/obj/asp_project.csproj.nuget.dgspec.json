@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj": {}
+    "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj": {}
   },
   "projects": {
-    "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj": {
+    "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj",
+        "projectUniqueName": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj",
         "projectName": "asp_project",
-        "projectPath": "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj",
-        "packagesPath": "/Users/hong/.nuget/packages/",
-        "outputPath": "/Users/hong/ASP_NET_project/asp_project/obj/",
+        "projectPath": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj",
+        "packagesPath": "C:\\Users\\scs02\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/hong/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\scs02\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -73,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
