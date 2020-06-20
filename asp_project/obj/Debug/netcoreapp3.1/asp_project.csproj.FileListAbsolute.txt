@@ -114,3 +114,11 @@ C:/Users/홍세화/source/repos/asp_net_project/asp_project/obj/Debug/netcoreapp
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetDB.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetTodayDB.cshtml.g.cs
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Mvc.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Razor.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Helpers.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.WebPages.Deployment.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.WebPages.Razor.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.WebPages.dll
+/Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/Microsoft.Web.Infrastructure.dll
+/Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Found/Search.cshtml.g.cs

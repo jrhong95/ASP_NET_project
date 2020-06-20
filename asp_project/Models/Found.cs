@@ -1,6 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace WebApplication3.Models
 {
@@ -17,4 +20,14 @@ namespace WebApplication3.Models
         public string Found_ImageURL { get; set; }   //이미지URL   
         public string Found_Description { get; set; } //설명
     }
+
+    public class SearchValue
+    {
+        public List<SelectListItem> cateList { get; set; }
+        public DateTime Start_date { get; set; }
+        public DateTime End_date { get; set; }
+        public string Value { get; set; }
+        public string name { get; set; }
+    }
+
 }

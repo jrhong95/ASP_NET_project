@@ -1,39 +1,36 @@
 ﻿<Properties StartupConfiguration="{20B4062A-9ED0-476A-8877-81B0E96173D4}|Default">
   <MonoDevelop.Ide.ItemProperties.asp__project PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DataContext/NoteDBContext.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/FoundController.cs">
     <Files>
-      <File FileName="Controllers/AccountController.cs" Line="86" Column="27" />
-      <File FileName="Controllers/HomeController.cs" Line="9" Column="2" />
-      <File FileName="DataContext/NoteDBContext.cs" Line="25" Column="6" />
-      <File FileName="Views/Home/Index.cshtml" Line="7" Column="53" />
-      <File FileName="Controllers/GetDBtoAPI.cs" Line="12" Column="38" />
-      <File FileName="Controllers/LostController.cs" Line="1" Column="1" />
-      <File FileName="Controllers/FoundController.cs" Line="16" Column="1" />
-      <File FileName="Views/Found/Detail.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Found/Index.cshtml" Line="9" Column="8" />
+      <File FileName="Views/Found/Index.cshtml" Line="18" Column="2" />
+      <File FileName="Controllers/FoundController.cs" Line="60" Column="65" />
+      <File FileName="DataContext/NoteDBContext.cs" Line="16" Column="22" />
+      <File FileName="Controllers/NoteController.cs" Line="1" Column="1" />
+      <File FileName="Views/Note/Add.cshtml" Line="30" Column="7" />
+      <File FileName="Views/Found/Search.cshtml" Line="6" Column="1" />
+      <File FileName="Models/Found.cs" Line="26" Column="36" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="asp_project" expanded="True">
             <Node name="asp_project" expanded="True">
-              <Node name="Controllers" expanded="True" />
-              <Node name="DataContext" expanded="True">
-                <Node name="NoteDBContext.cs" selected="True" />
+              <Node name="Controllers" expanded="True">
+                <Node name="FoundController.cs" selected="True" />
               </Node>
+              <Node name="DataContext" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="ViewModel" expanded="True" />
               <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
                 <Node name="Found" expanded="True" />
                 <Node name="Home" expanded="True" />
+                <Node name="Lost" expanded="True" />
+                <Node name="Note" expanded="True" />
               </Node>
             </Node>
           </Node>
-        </State>
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>d</Value>
         </State>
       </Pad>
     </Pads>

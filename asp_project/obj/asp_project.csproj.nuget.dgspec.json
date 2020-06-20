@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj": {}
+    "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj": {
+    "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj",
+        "projectUniqueName": "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj",
         "projectName": "asp_project",
-        "projectPath": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\asp_project.csproj",
-        "packagesPath": "C:\\Users\\scs02\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\scs02\\Desktop\\dafs\\asp_project\\obj\\",
+        "projectPath": "/Users/hong/ASP_NET_project/asp_project/asp_project.csproj",
+        "packagesPath": "/Users/hong/.nuget/packages/",
+        "outputPath": "/Users/hong/ASP_NET_project/asp_project/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\scs02\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/hong/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,6 +36,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.5, )"
@@ -75,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.300/RuntimeIdentifierGraph.json"
         }
       }
     }
