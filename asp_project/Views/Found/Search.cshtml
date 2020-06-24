@@ -35,7 +35,7 @@
     <div class="panel text-center">
         @for (var p = 1; p <= Model.PageCount; p++)
         {
-            <a href="@Url.Action("Index", new { page = p })" class="btn btn-outline-primary">@p</a>
+            <a href="@Url.Action("Search", new { page = p })" class="btn btn-outline-primary">@p</a>
         }
     </div>
 </form>

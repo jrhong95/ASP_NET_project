@@ -40,41 +40,40 @@ namespace WebApplication3.Controllers
             return View(sv);
         }
 
-        public IActionResult Search(SearchValue model = null, int page = 1)
+        public IActionResult Search(SearchValue model, int page = 1)
         {
+            
             getDB.GetSeoul(DateTime.Now);
             getDB.GetPolice(DateTime.Now, DateTime.Now, 100);
-            if(model == null)
+
+            List<Found> founds = new List<Found>();
+            using (NoteDBContext db = new NoteDBContext())
             {
-                List<Found> founds = new List<Found>();
-                using (NoteDBContext db = new NoteDBContext())
+                var dbList = db.Found;
+                var searchList = from a in dbList
+                                 where a.Found_DateTime >= model.Start_date
+                                 where a.Found_DateTime <= model.End_date
+                                 where a.Found_BigCate == model.Value
+                                 select a;
+                searchList = searchList.OrderBy(data => data.Found_DateTime);
+                //searchList = searchList.Where(data => model.name.All(s => data.Found_Name.Contains(s)));
+                foreach (var found in searchList)
                 {
-                    var a = db.Found;
-
-                    foreach (var found in a)
+                    founds.Add(new Found
                     {
-                        founds.Add(new Found
-                        {
-                            Found_id = found.Found_id,
-                            Found_data = found.Found_data,
-                            Found_BigCate = found.Found_BigCate,
-                            Found_DateTime = found.Found_DateTime,
-                            Found_Description = found.Found_Description,
-                            Found_GetPosition = found.Found_GetPosition,
-                            Found_ImageURL = found.Found_ImageURL,
-                            Found_Name = found.Found_Name,
-                            Found_SmallCate = found.Found_SmallCate
-                        });
-                    }
+                        Found_id = found.Found_id,
+                        Found_data = found.Found_data,
+                        Found_BigCate = found.Found_BigCate,
+                        Found_DateTime = found.Found_DateTime,
+                        Found_Description = found.Found_Description,
+                        Found_GetPosition = found.Found_GetPosition,
+                        Found_ImageURL = found.Found_ImageURL,
+                        Found_Name = found.Found_Name,
+                        Found_SmallCate = found.Found_SmallCate
+                    });
                 }
-
-                return View(founds.ToPagedList(page, 10));
             }
-            else
-            {
-
-            }
-            return View();
+            return View(founds.ToPagedList(page, 10));
         }
 
 

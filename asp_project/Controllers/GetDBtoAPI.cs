@@ -113,12 +113,6 @@ namespace WebApplication3.Controllers
                     {
                         using (var db = new NoteDBContext())
                         {
-                            //var data = db.Found.Where(d=> d.Found_Name.ToString().Equals(found_police.Found_Name.ToString()) &&
-                            //                                d.Found_Description.ToString().Equals(found_police.Found_Description.ToString()) &&
-                            //                                d.Found_DateTime.ToString().Equals(found_police.Found_DateTime.ToString()) &&
-                            //                                d.Found_GetPosition.ToString().Equals(found_police.Found_GetPosition.ToString()))
-                            //    .FirstOrDefault();
-
                             var da = from d in db.Found
                                      where d.Found_Name == found_police.Found_Name
                                      where d.Found_Description == found_police.Found_Description

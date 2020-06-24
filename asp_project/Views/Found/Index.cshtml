@@ -6,13 +6,13 @@
 @model WebApplication3.Models.SearchValue
 @{
     <form class="form" method="post">
-        @Html.TextBoxFor(m => m.Start_date, "yyyyMMdd")
+        @Html.TextBoxFor(m => m.Start_date, new { @type = "date", @Value = Model.Start_date.ToString("yyyy-MM-dd") })
         <label> ~ </label>
 
-        @Html.TextBoxFor(m => m.End_date, "yyyyMMdd")
+        @Html.TextBoxFor(m => m.End_date, new { @type = "date", @Value = Model.End_date.ToString("yyyy-MM-dd") })
         @Html.DropDownListFor(m => m.Value, new SelectList(Model.cateList, "Value", "Text"), new { @class = "form-control" })
-        <label>   특징</label>
-        @Html.TextBoxFor(m=>m.name)
+        @*<label>   특징</label> @Html.TextBoxFor(m => m.name)*@
+
         <button type="submit" asp-action="Search">검색</button>
     </form>
 }
