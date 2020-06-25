@@ -55,7 +55,7 @@ namespace WebApplication3.Controllers
                                  where a.Found_DateTime <= model.End_date
                                  where a.Found_BigCate == model.Value
                                  select a;
-                searchList = searchList.OrderBy(data => data.Found_DateTime);
+                searchList = searchList.OrderByDescending(data => data.Found_DateTime);
                 foreach (var found in searchList)
                 {
                     founds.Add(new Found

@@ -9,6 +9,11 @@
     <ExternalConsole>true</ExternalConsole>
     <ApplicationURL>http://localhost:7919</ApplicationURL>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200625101004_NoteDB.cs" />
+    <Compile Remove="Migrations\20200625101004_NoteDB.Designer.cs" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.5">
