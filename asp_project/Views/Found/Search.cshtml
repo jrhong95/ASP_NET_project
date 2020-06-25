@@ -21,7 +21,9 @@
                     <td>@found.Found_data</td>
                     <td>@found.Found_DateTime</td>
                     <td>@found.Found_BigCate</td>
-                    <td>@found.Found_Name</td>
+                    <td>
+                        <a asp-controller="Found" asp-action="Detail" asp-route-Found_id ="@found.Found_id"> @found.Found_Name</a>
+                    </td>
                     <td>@found.Found_GetPosition</td>
                     <td>@found.Found_Description</td>
                 </tr>

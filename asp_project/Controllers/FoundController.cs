@@ -80,12 +80,16 @@ namespace WebApplication3.Controllers
         }
 
 
-        public IActionResult Detail()
+        public IActionResult Detail(int found_id)
         {
+            using (var db = new NoteDBContext())
+            {
+                var note = db.Found.FirstOrDefault(n => n.Found_id.Equals(found_id));
+
+                return View(note);
+            }
             return View();
         }
-
-
     }
 }
 
