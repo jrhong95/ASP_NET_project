@@ -211,3 +211,4 @@ C:\Users\안상혁\source\repos\Solution1\ASP_NET_project\ASP_NET_project\asp_pr
 C:\Users\안상혁\source\repos\Solution1\ASP_NET_project\ASP_NET_project\asp_project\obj\Debug\netcoreapp3.1\asp_project.dll
 C:\Users\안상혁\source\repos\Solution1\ASP_NET_project\ASP_NET_project\asp_project\obj\Debug\netcoreapp3.1\asp_project.pdb
 C:\Users\안상혁\source\repos\Solution1\ASP_NET_project\ASP_NET_project\asp_project\obj\Debug\netcoreapp3.1\asp_project.genruntimeconfig.cache
+C:\Users\안상혁\source\repos\Solution1\ASP_NET_project\ASP_NET_project\asp_project\obj\Debug\netcoreapp3.1\Razor\Views\Found\Path.cshtml.g.cs

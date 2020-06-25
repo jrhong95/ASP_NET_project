@@ -90,6 +90,13 @@ namespace WebApplication3.Controllers
             }
             return View();
         }
+
+        public IActionResult Path()
+        {
+            return View();
+        }
     }
+
+    
 }
 
