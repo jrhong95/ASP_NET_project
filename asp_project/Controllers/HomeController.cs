@@ -3,7 +3,8 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using WebApplication3.Models;
-
+using WebApplication3.DataContext;
+using System.Linq;
 
 namespace WebApplication3.Controllers
 {
@@ -18,6 +19,13 @@ namespace WebApplication3.Controllers
 
         public IActionResult Index()
         {
+            int count;
+            using (NoteDBContext db = new NoteDBContext())
+            {
+                var list = from c in db.Found select c;
+                count = list.Count();
+            }
+            ViewBag.count = count;
             return View();
         }
 

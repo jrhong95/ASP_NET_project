@@ -100,7 +100,6 @@ C:/Users/홍세화/source/repos/asp_net_project/asp_project/obj/Debug/netcoreapp
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs
-/Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/asp_project.RazorTargetAssemblyInfo.cache
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/asp_project.RazorTargetAssemblyInfo.cs
@@ -113,7 +112,6 @@ C:/Users/홍세화/source/repos/asp_net_project/asp_project/obj/Debug/netcoreapp
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/asp_project.genruntimeconfig.cache
 /Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetDB.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll
-/Users/hong/ASP_NET_project/asp_project/obj/Debug/netcoreapp3.1/Razor/Views/Home/GetTodayDB.cshtml.g.cs
 /Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Mvc.dll
 /Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Razor.dll
 /Users/hong/ASP_NET_project/asp_project/bin/Debug/netcoreapp3.1/System.Web.Helpers.dll

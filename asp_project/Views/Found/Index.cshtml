@@ -1,16 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿
 @model WebApplication3.Models.SearchValue
 @{
     <form class="form" method="post">
-        @Html.TextBoxFor(m => m.Start_date, new { @type = "date", @Value = Model.Start_date.ToString("yyyy-MM-dd") })
-        <label> ~ </label>
-
-        @Html.TextBoxFor(m => m.End_date, new { @type = "date", @Value = Model.End_date.ToString("yyyy-MM-dd") })
-        @Html.DropDownListFor(m => m.Value, new SelectList(Model.cateList, "Value", "Text"), new { @class = "form-control" })
+        날짜: 시작 @(Html.TextBoxFor(m => m.Start_date, new { @type = "date", @Value = Model.Start_date.ToString("yyyy-MM-dd") }))
+         끝 @(Html.TextBoxFor(m => m.End_date, new { @type = "date", @Value = Model.End_date.ToString("yyyy-MM-dd") }))
+        @Html.DropDownListFor(m => m.Value, new SelectList(Model.cateList, "Value", "Text"), "분류를 선택하세요",new { @class = "form-control" })
         @*<label>   특징</label> @Html.TextBoxFor(m => m.name)*@
 
         <button type="submit" asp-action="Search">검색</button>

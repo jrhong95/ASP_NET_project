@@ -23,11 +23,11 @@ namespace WebApplication3.Models
 
     public class SearchValue
     {
-        public List<SelectListItem> cateList { get; set; }
-        public DateTime Start_date { get; set; }
-        public DateTime End_date { get; set; }
-        public string Value { get; set; }
-        public string name { get; set; }
+        public List<SelectListItem> cateList { get; set; } //DB에서 분류만 가져옴
+        public DateTime Start_date { get; set; }           //검색 시작 날짜
+        public DateTime End_date { get; set; }             //검색 끝  날짜
+        public string Value { get; set; }                  //분류 선택 값
+        //public string name { get; set; }                
     }
 
 }

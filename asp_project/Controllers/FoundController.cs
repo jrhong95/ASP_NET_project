@@ -16,7 +16,7 @@ namespace WebApplication3.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            List<string> cateList = new List<string>(); //분ㅔ
+            List<string> cateList = new List<string>();
             using (NoteDBContext db = new NoteDBContext())
             {
                 var dv = db.Found;
@@ -56,7 +56,6 @@ namespace WebApplication3.Controllers
                                  where a.Found_BigCate == model.Value
                                  select a;
                 searchList = searchList.OrderBy(data => data.Found_DateTime);
-                //searchList = searchList.Where(data => model.name.All(s => data.Found_Name.Contains(s)));
                 foreach (var found in searchList)
                 {
                     founds.Add(new Found
@@ -73,6 +72,10 @@ namespace WebApplication3.Controllers
                     });
                 }
             }
+            ViewBag.sDate = model.Start_date;
+            ViewBag.eDate = model.End_date;
+            ViewBag.cateValue = model.Value;
+            
             return View(founds.ToPagedList(page, 10));
         }
 
