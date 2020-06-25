@@ -23,8 +23,8 @@
                 습득 날짜 : @Html.Raw(Model.Found_DateTime) <br />
                 설명 : @Html.Raw(Model.Found_Description) <br />
                 보관 장소 : @Html.Raw(Model.Found_GetPosition) <br />
-                이미지 : @Html.Raw(Model.Found_ImageURL) <br />
-
+                @*이미지 : @Html.Raw(Model.Found_ImageURL) <br />*@
+                <img src="@(Model.Found_ImageURL)">
             </div>
             <div class="panel-footer text-right">
                 <a class="btn btn-primary" text-align="right" asp-controller="Found" asp-action="Index">목록</a>
