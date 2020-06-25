@@ -11,11 +11,15 @@ namespace WebApplication3.Controllers
 {
     public class FoundController : Microsoft.AspNetCore.Mvc.Controller
     {
+
         GetDBtoAPI getDB = new GetDBtoAPI();
 
         // GET: /<controller>/
         public IActionResult Index()
         {
+            getDB.GetSeoul(DateTime.Now);
+            getDB.GetPolice(DateTime.Now, DateTime.Now, 100);
+
             List<string> cateList = new List<string>();
             using (NoteDBContext db = new NoteDBContext())
             {
@@ -42,10 +46,6 @@ namespace WebApplication3.Controllers
 
         public IActionResult Search(SearchValue model, int page = 1)
         {
-            
-            getDB.GetSeoul(DateTime.Now);
-            getDB.GetPolice(DateTime.Now, DateTime.Now, 100);
-
             List<Found> founds = new List<Found>();
             using (NoteDBContext db = new NoteDBContext())
             {
